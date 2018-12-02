@@ -1,6 +1,5 @@
 require "day_one_chronal_calibration"
 require_relative "../support/day_one"
-include DayOne
 
 RSpec.describe DayOneChronalCalibration do
   it "exists" do
@@ -27,7 +26,7 @@ RSpec.describe DayOneChronalCalibration do
 
   it "should return 500 given the puzzle input" do
     start = 0
-    changes = puzzle_input
+    changes = DayOne.puzzle_input
 
     result = DayOneChronalCalibration.new(start, changes).calibrate
 

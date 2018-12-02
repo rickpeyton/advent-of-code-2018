@@ -1,6 +1,5 @@
 require "day_two/inventory_management_system"
 require_relative "../../support/day_two"
-include DayTwo
 
 RSpec.describe InventoryManagementSystem do
   it "exists" do
@@ -20,7 +19,7 @@ RSpec.describe InventoryManagementSystem do
 
     context "puzzle" do
       it "should solve the puzzle" do
-        ids = puzzle_input
+        ids = DayTwo.puzzle_input
 
         result = InventoryManagementSystem.new(ids).checksum
 
@@ -42,11 +41,11 @@ RSpec.describe InventoryManagementSystem do
 
     context "puzzle" do
       it "should return fgij as the common letters" do
-        ids = puzzle_input
+        ids = DayTwo.puzzle_input
 
         result = InventoryManagementSystem.new(ids).common
 
-        expect(result).to eq puzzle_result
+        expect(result).to eq DayTwo.puzzle_result
       end
     end
   end

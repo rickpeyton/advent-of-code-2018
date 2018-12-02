@@ -27,17 +27,25 @@ class InventoryManagementSystem
     until all_ids_compared
       id = pull_next_id
       @ids.each do |string|
-        local_match = []
-        string.each_char.with_index do |character, index|
-          local_match << character if character == id[index]
-        end
-        match = local_match.join if local_match.size > match.length
+        match = compare_current_to_next(id, string, match)
       end
     end
     match
   end
 
 private
+
+  def compare_current_to_next(current_id, next_id, match)
+    local_match = []
+    next_id.each_char.with_index do |character, index|
+      local_match << character if character == current_id[index]
+    end
+    if local_match.size > match.length
+      local_match.join
+    else
+      match
+    end
+  end
 
   def all_ids_compared
     @ids.empty?

@@ -1,5 +1,5 @@
 module DayOne
-  def puzzle_input
+  def self.puzzle_input
     %w(
       +13
       -18

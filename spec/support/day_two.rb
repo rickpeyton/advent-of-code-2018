@@ -1,5 +1,5 @@
 module DayTwo
-  def puzzle_input
+  def self.puzzle_input
     %w(
       mvgowxqubnhaefjslkjlrptzyi
       pvgowlqubnhaefmslkjdrpteyi
@@ -254,7 +254,7 @@ module DayTwo
     )
   end
 
-  def puzzle_result
+  def self.puzzle_result
     "cvgywxqubnuaefmsljdrpfzyi"
   end
 end
