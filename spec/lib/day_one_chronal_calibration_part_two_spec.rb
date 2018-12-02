@@ -1,8 +1,9 @@
 require "day_one_chronal_calibration_part_two"
 require_relative "../support/day_one"
-include DayOne
 
 RSpec.describe DayOneChronalCalibrationPartTwo do
+  include DayOne
+
   it "exists" do
     expect(described_class).to eq DayOneChronalCalibrationPartTwo
   end
