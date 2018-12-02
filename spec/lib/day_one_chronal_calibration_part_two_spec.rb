@@ -33,7 +33,7 @@ RSpec.describe DayOneChronalCalibrationPartTwo do
 
     expect(result).to eq 14
   end
-  
+
   it "should return 0 starting at 0 and given 1, -1" do
     start = 0
     changes = [1, -1]

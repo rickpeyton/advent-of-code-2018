@@ -11,7 +11,7 @@ class DayOneChronalCalibrationPartTwo
     end
   end
 
-  private
+private
 
   def frequency_repeated?
     @frequency.select { |f| f == @frequency.last }.size > 1
